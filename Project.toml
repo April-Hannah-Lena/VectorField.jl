@@ -1,0 +1,13 @@
+name = "VectorField"
+uuid = "792c5eea-985b-4557-8c05-ef516bc38993"
+authors = ["April Herwig"]
+version = "0.1.0"
+
+[compat]
+julia = "1.1"
+
+[extras]
+Test = "8dfed614-e22c-5e08-85e1-65c5234f0b40"
+
+[targets]
+test = ["Test"]
