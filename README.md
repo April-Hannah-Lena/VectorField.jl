@@ -1,4 +1,4 @@
-# VectorField
+# VectorField.jl
 
 [![Stable](https://img.shields.io/badge/docs-stable-blue.svg)](https://April-Hannah-Lena.github.io/VectorField.jl/stable)
 [![Dev](https://img.shields.io/badge/docs-dev-blue.svg)](https://April-Hannah-Lena.github.io/VectorField.jl/dev)
@@ -17,7 +17,7 @@ Pkg.add(https://github.com/April-Hannah-Lena/VectorField.jl.git)
 ### Usage
 
 ```julia
-using VectorField.jl
+using VectorField
 ```
 
 This package serves just one purpose, which is to make `quiver()` from `Plots.jl` easier to use. All of the following are equivalent:
@@ -39,16 +39,16 @@ meshgrid(-1:0.5:1, -1:0.5:1)
 Instead of a `Function`, `vectorfield()` can accept 2 matrices with eltype `Float` or one matrix with eltype `Array{Float,1}`. 
 
 ```julia
-xs = ys = -1:0.5:1
+xs = ys = [-1.0, -0.5, 0.0, 0.5, 1.0]
 u = [Df(x, y)[1] for x in xs, y in ys]
 v = [Df(x, y)[2] for x in xs, y in ys]
 # u, v are 2 matrices, the value of u[i, j] is the x component of the arrow, 
 # the value of v[i, j] is the y component of the arrow, at the point [x[i], v[j]]
 # Grid will be interpolated as:
-#     y ⟶            y ⟶
+#     y — ➤           y — ➤
 # x                 x
 # |    u            |    v   
-# ↓            ,    ↓
+# ▼            ,    ▼
 
 vectorfield(xs, ys, u, v)
 ```
@@ -60,10 +60,10 @@ xs = ys = -1:0.5:1
 uv = [Df(x, y) for x in xs, y in ys]
 # uv is a matrix of 2-element arrays [x, y]. Arrows will be interpreted componentwise.
 # Grid will be interpolated as:
-#     y ⟶
+#     y — ➤
 # x
 # |    uv  
-# ↓   
+# ▼
 
 vectorfield(xs, ys, uv)
 ```
