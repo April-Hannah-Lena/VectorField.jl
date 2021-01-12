@@ -3,6 +3,7 @@ __precompile__(true)
 module VectorField
 
 using Plots, LinearAlgebra
+export meshgrid, vectorfield, vectorfield!
 
 
 function meshgrid(x, y)
