@@ -23,9 +23,9 @@ using VectorField
 This package serves just one purpose, which is to make `quiver()` from `Plots.jl` easier to use. All of the following are equivalent:
 
 ```julia
-Df(x, y) = [-x, y]                      # vectorfield(x, y, f) takes two Vectors x, y with eltype Float
-                                        # as well as a Function f that takes 2 arguments and returns
-vectorfield(-1:0.5:1, -1:0.5:1, Df)     # a Vector of length 2. 
+Df(x, y) = [-x, y]                      # vectorfield(x, y, f) takes two Vectors x, y with 
+                                        # eltype Float as well as a Function f that takes 
+vectorfield(-1:0.5:1, -1:0.5:1, Df)     # 2 arguments and returns a Vector of length 2. 
 ```
 
 `vectorfield()` will interpolate a grid from the 2 Vectors x, y. It does this using 
