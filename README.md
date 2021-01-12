@@ -17,7 +17,7 @@ Pkg.add(https://github.com/April-Hannah-Lena/VectorField.jl.git)
 ### Usage
 
 ```julia
-using VectorField
+using VectorField.jl
 ```
 
 This package serves just one purpose, which is to make `quiver()` from `Plots.jl` easier to use. All of the following are equivalent:
@@ -33,6 +33,7 @@ vectorfield(-1:0.5:1, -1:0.5:1, Df)     # 2 arguments and returns a Vector of le
 ```julia
 meshgrid(-1:0.5:1, -1:0.5:1)
 # meshgrid(x, y) creates a 2xd Array of all combinations of elements in x, y
+# where d == length(x)*length(y)
 ```
 
 Instead of a `Function`, `vectorfield()` can accept 2 matrices with eltype `Float` or one matrix with eltype `Array{Float,1}`. 
