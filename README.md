@@ -11,7 +11,7 @@ To install and run VectorField.jl, run in your REPL:
 
 ```julia
 using Pkg
-Pkg.add(https://github.com/April-Hannah-Lena/VectorField.jl.git)
+Pkg.add(url="https://github.com/April-Hannah-Lena/VectorField.jl.git")
 ```
 
 ### Usage
