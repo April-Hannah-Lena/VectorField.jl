@@ -45,10 +45,10 @@ v = [Df(x, y)[2] for x in xs, y in ys]
 # u, v are 2 matrices, the value of u[i, j] is the x component of the arrow, 
 # the value of v[i, j] is the y component of the arrow, at the point [x[i], v[j]]
 # Grid will be interpolated as:
-#     y - >            y - >
+#     y ⟶            y ⟶
 # x                 x
-# |    u            |    v
-# v           ,     v
+# |    u            |    v   
+# ↓            ,    ↓
 
 vectorfield(xs, ys, u, v)
 ```
@@ -60,10 +60,10 @@ xs = ys = -1:0.5:1
 uv = [Df(x, y) for x in xs, y in ys]
 # uv is a matrix of 2-element arrays [x, y]. Arrows will be interpreted componentwise.
 # Grid will be interpolated as:
-#     ys - >
-# xs
-# |    uv
-# v
+#     y ⟶
+# x
+# |    uv  
+# ↓   
 
 vectorfield(xs, ys, uv)
 ```
