@@ -2,7 +2,8 @@ __precompile__(true)
 
 module VectorField
 
-using Plots, LinearAlgebra
+import Plots: quiver, quiver!
+import LinearAlgebra: adjoint
 export meshgrid, vectorfield, vectorfield!
 
 
